@@ -53,6 +53,30 @@ net.core.wmem_max=16777216
 net.ipv4.tcp_rmem=4096 87380 16777216
 net.ipv4.tcp_wmem=4096 65536 16777216
 
+# 网络稳定性和性能优化
+vm.swappiness=10
+fs.file-max=2097152
+net.ipv4.tcp_fastopen=3
+net.ipv4.tcp_tw_reuse=1
+net.ipv4.tcp_fin_timeout=10
+net.ipv4.tcp_keepalive_time=300
+net.ipv4.tcp_keepalive_probes=3
+net.ipv4.tcp_keepalive_intvl=60
+net.ipv4.ip_local_port_range="1024 65535"
+net.ipv4.tcp_max_syn_backlog=262144
+net.ipv4.tcp_max_tw_buckets=262144
+net.ipv4.udp_rmem_min=8192
+net.ipv4.udp_wmem_min=8192
+net.core.somaxconn=262144
+net.core.netdev_max_backlog=262144
+net.ipv4.tcp_syncookies=1
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_timestamps=1
+net.ipv4.tcp_window_scaling=1
+net.ipv4.tcp_rmem="8192 262144 536870912"
+net.ipv4.tcp_wmem="4096 16384 536870912"
+net.core.optmem_max=25165824
+
 # 调整网络设备队列
 net.core.netdev_max_backlog=$MAX_RX
 EOF
